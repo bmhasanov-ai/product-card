@@ -7,7 +7,8 @@ body {
   line-height: 138%;
   color: #515076;
   background: #fff;
-    }
+  display: flex;
+}
 
 .title-list {
   font-weight: 400;
@@ -54,27 +55,36 @@ body {
 }
 
 .compound {
-  
+  width: 252px;
+  height: 87px;
+  margin-top: 15px;
+  margin-bottom: 25px;
 }
 
 .product-compound {
-  display: block; 
+  margin: 0 0 5px 0;
 }
 
 .product-compound-list {
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 138%;
+  margin: 0;
+  padding-left: 15px;
 }
 
-.product-compound-item {
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 138%;
+.product-price {
+  width: 290px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.product-price {}
+.product-price-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+}
 
-.price {}
-
-.sum {}
+.product-price-value {
+  font-size: 20px;
+  line-height: 120%;
+}
