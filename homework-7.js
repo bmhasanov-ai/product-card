@@ -4,12 +4,12 @@ function showTemperature(city, temperature) {
 
 showTemperature("Казань", 28);
 
-const speedOfLight = 299792458;
+const SPEED_OF_LIGHT = 299792458;
 
 function checkSpeed(speed) {
-  if (speed > speedOfLight) {
+  if (speed > SPEED_OF_LIGHT  ) {
     console.log("Сверх световая скорость");
-  } else if (speed < speedOfLight) {
+  } else if (speed < SPEED_OF_LIGHT) {
     console.log("Субсветовая скорость");
   } else {
     console.log("Световая скорость");
@@ -21,7 +21,7 @@ checkSpeed(100000000);
 const miskMusk = "Парфюм"
 const miskMuskPrice = 1000;
 
-function currentBudget(budget) {
+function calculateBudget(budget) {
   if (budget >= miskMuskPrice) {
     console.log(`${miskMusk} приобретён. Спасибо за покупку!`);
   } else {
@@ -29,7 +29,7 @@ function currentBudget(budget) {
   }
 }
 
-currentBudget(500);
+calculateBudget(500);
 
 function chekTime(hminute) {
   if (hminute >= 60) {
