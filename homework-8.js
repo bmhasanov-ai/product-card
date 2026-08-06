@@ -50,85 +50,79 @@ showProperty(hasan, "name");
 
 const products = ["Молоко", "Хлеб", "Сыр", "Яйца", "Масло"];
 
-// Задание 8. Массив с книгами
+// Задание 8. Создать массив из объектов-книг
 
-const book1 = {
-  title: "Война и мир",
-  author: "Лев Толстой",
-  year: 1869,
-  coverColor: "brown",
-  genre: "Роман"
-};
+const books = [
+  {
+    title: "Война и мир",
+    author: "Лев Толстой",
+    year: 1869,
+    coverColor: "brown",
+    genre: "Роман"
+  },
+  {
+    title: "Преступление и наказание",
+    author: "Фёдор Достоевский",
+    year: 1866,
+    coverColor: "grey",
+    genre: "Роман"
+  },
+  {
+    title: "Мастер и Маргарита",
+    author: "Михаил Булгаков",
+    year: 1967,
+    coverColor: "yellow",
+    genre: "Роман"
+  },
+  {
+    title: "Сахих Бухари",
+    author: "Мухаммад аль-Бухари",
+    year: 870,
+    coverColor: "blue",
+    genre: "Научная литература"
+  }
+];
 
-const book2 = {
-  title: "Преступление и наказание",
-  author: "Фёдор Достоевский",
-  year: 1866,
-  coverColor: "grey",
-  genre: "Роман"
-};
-
-const book3 = {
-  title: "Мастер и Маргарита",
-  author: "Михаил Булгаков",
-  year: 1967,
-  coverColor: "yellow",
-  genre: "Роман"
-};
-
-const book4 = {
-  title: "Сахих Бухари",
-  author: "Мухаммад аль-Бухари",
-  year: 870,
-  coverColor: "blue",
-  genre: "Научная литература"
-};
-
-const book5 = {
+books.push({
   title: "Муфсидат",
-  author: "Ибн-Каййим",
+  author: "Ибн аль-Каййим",
   year: 1340,
   coverColor: "red",
   genre: "Научная литература"
-}
-const books = [book1, book2, book3, book4];
-
-books.push(book5)
+});
 
 
-// Задание 9. Ещё один массив с книгами и объединение с предыдущим массивом
+// Задание 9. Создать второй массив из объектов-книг объединить его с массивом из задания 8.
 
-const islamBook1 = {
-  title: "Фаваид",
-  author: "Ибн-Каййим",
-  year: 1341,
-  coverColor: "black",
-  genre: "Научная литература"
-}
+const islamBooks = [
+  {
+    title: "Фаваид",
+    author: "Ибн аль-Каййим",
+    year: 1341,
+    coverColor: "black",
+    genre: "Научная литература"
+  },
+  {
+    title: "Аль-Вабиль ас-Сайиб",
+    author: "Ибн аль-Каййим",
+    year: 1342,
+    coverColor: "black",
+    genre: "Научная литература"
+  },
+  {
+    title: "Болезнь и исцеление",
+    author: "Ибн аль-Каййим",
+    year: 1349,
+    coverColor: "black",
+    genre: "Научная литература"
+  }
+];
 
-const islamBook2 = {
-  title: "Ваабиль",
-  author: "Ибн-Каййим",
-  year: 1342,
-  coverColor: "black",
-  genre: "Научная литература"
-}
-
-const islamBook3 = {
-  title: "Болезнь и исцеление",
-  author: "Ибн-Каййим",
-  year: 1349,
-  coverColor: "black",
-  genre: "Научная литература"
-}
-
-const islamBooks = [islamBook1, islamBook2, islamBook3]
-
-const allBooks = [...books, ...islamBooks]
+const allBooks = [...books, ...islamBooks];
 
 // Задание 10. Создать новый массив с помощью map в котором добавиться ещё одно свойство
 
-function addIsRare(rareBooks) {
+function getIsRare(rareBooks) {
   return rareBooks.map(function (book) {
 
     if (book.year > 2000) {
