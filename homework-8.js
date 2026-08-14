@@ -136,6 +136,6 @@ function getIsRare(rareBooks) {
   });
 }
 
-const updatedBooks = addIsRare(allBooks);
+const updatedBooks = getIsRare(allBooks);
 
 console.log(updatedBooks);
