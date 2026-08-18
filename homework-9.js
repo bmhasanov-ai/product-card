@@ -1,3 +1,5 @@
+import { comments } from "./comments.js";
+
 // Задание 2.
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -13,20 +15,17 @@ const films = [
   "Pulp Fiction"
 ]
 
-const fantasticFilm = films.includes("The Matrix");
+const isFantasticFilm = films.includes("The Matrix");
 
 // Задание 4.
 
 function reverseArray(array) {
-  return array.reverse();
+  array.reverse();
 }
 
 reverseArray(numbers);
 reverseArray(films);
 
-// Задание 6.
-
-import { comments } from "./comments.js";
 
 // Задание 7.
 
@@ -34,40 +33,27 @@ const comEmails = comments.filter(comment => comment.email.includes(".com"));
 
 // Задание 8.
 
-const newIdComments = comments.map(function (comment) {
-  if (comment.id <= 5) {
-    comment.postId = 2
-  } else {
-    comment.postId = 1
-  }
-  return comment;
-})
+const newIdComments = comments.map(comment => { comment.id <= 5 ? comment.postId = 2 : comment.postId = 1; return comment; })
+
 
 // Задание 9.
 
-const shortComments = comments.map(function (comment) {
+const shortComments = comments.map(comment => {
   return { id: comment.id, name: comment.name }
 })
 
 // Задание 10.
 
-const newComments = comments.map(function (comment) {
-  if (comment.body.length > 180) {
-    comment.isInvalid = true
-  } else { comment.isInvalid = false }
-  return comment;
-})
+const newComments = comments.map(comment => { comment.body.length > 180 ? comment.isInvalid = true : comment.isInvalid = false; return comment; })
 
 // Задание 11.
 
-const emailsArray = comments.reduce(function (acc, comment) {
+const emailsArray = comments.reduce((acc, comment) => {
   acc.push(comment.email);
   return acc;
 }, []);
 
-const emailsArray2 = comments.map(function (comment) {
-  return comment.email;
-})
+const emailsArray2 = comments.map(comment => comment.email);
 
 // Задание 12.
 
