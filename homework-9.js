@@ -29,22 +29,31 @@ reverseArray(films);
 
 // Задание 7.
 
-const getComEmails = comments.filter(comment => comment.email.includes(".com"));
+const ComEmails = comments.filter(comment => comment.email.includes(".com"));
 
 // Задание 8.
 
-const getNewIdComments = comments.map(comment => { comment.id <= 5 ? comment.postId = 2 : comment.postId = 1; return comment; })
+const NewIdComments = comments.map(comment => { comment.id <= 5 ? comment.postId = 2 : comment.postId = 1; return comment; })
 
+console.log(NewIdComments);
 
+const newComments = comments.map(comment => {
+  return {
+    ...comment,
+    postId: comment.id <= 5 ? 2 : 1
+  };
+});
+
+console.log(newComments);
 // Задание 9.
 
-const getShortComments = comments.map(comment => {
+const ShortComments = comments.map(comment => {
   return { id: comment.id, name: comment.name }
 })
 
 // Задание 10.
 
-const getNewComments = comments.map(comment => { comment.body.length > 180 ? comment.isInvalid = true : comment.isInvalid = false; return comment; })
+const NewComments = comments.map(comment => { comment.body.length > 180 ? comment.isInvalid = true : comment.isInvalid = false; return comment; })
 
 // Задание 11.
 
