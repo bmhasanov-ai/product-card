@@ -18,8 +18,8 @@
       <button class="buttons sea" id="colorful-button">Разноцветная кнопка</button>
     </div>
     <h1 class="title catalog__title">Выбери свой продукт</h1>
-    <div class="container ">
-
+    <div id="product-list" class="container ">
+      <!-- 
       <div class="product">
         <img class="product__image" src="img/moisturizer_mousse.jpg" alt="Увлажняющий мусс" width="295" height="245">
         <p class="product__description">для нормальной кожи</p>
@@ -112,15 +112,30 @@
         <div class="price">
           <b class="price__title">Цена</b>
           <span class="price__value"> 7 520 &#8381;</span>
+        </div> -->
+    </div>
+    <template id="product-template">
+      <div class="product">
+        <img class="product__image" src="" alt="" width="295" height="245">
+        <p class="product__description"></p>
+        <h2 class="product__name"></h2>
+        <p class="product__properties"></p>
+        <div class="compound">
+          <p class="compound__item">Состав:</p>
+          <ul class="compound__list"></ul>
+        </div>
+        <div class="price">
+          <b class="price__title">Цена</b>
+          <span class="price__value"></span>
         </div>
       </div>
-    </div>
+    </template>
   </main>
   <script src="main.js"></script>
   <script src="homework-7.js"></script>
   <script src="homework-8.js"></script>
   <script src="homework-9.js" type="module"></script>
-  <script src="comments.js" type="module"></script>
+  <script src="homework-10.js" type="module"></script>
 </body>
 
 </html>
