@@ -6,21 +6,14 @@ const productTemplate = document.getElementById("product-template");
 function renderProducts(productsArray) {
   productsArray.forEach(product => {
     const productElement = productTemplate.content.cloneNode(true);
-
-    productElement.querySelector(".product__image").src = product.image;
+    productElement.querySelector(".product__image").src = `img/${product.image}.jpg`;
     productElement.querySelector(".product__image").alt = product.name;
-
     productElement.querySelector(".product__description").textContent = product.description;
-
     productElement.querySelector(".product__name").textContent = product.name;
-
     productElement.querySelector(".product__properties").textContent = product.properties;
-
     product.compound.forEach(compoundItem => {
       const listItem = document.createElement("li");
-
       listItem.textContent = compoundItem;
-
       productElement.querySelector(".compound__list").append(listItem);
     });
 
