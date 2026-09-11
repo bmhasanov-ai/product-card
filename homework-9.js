@@ -33,7 +33,7 @@ const comEmails = comments.filter(comment => comment.email.includes(".com"));
 
 // Задание 8.
 
-const newComments = comments.map(comment => {
+const newIdComments = comments.map(comment => {
   return {
     ...comment,
     postId: comment.id <= 5 ? 2 : 1
