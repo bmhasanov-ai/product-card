@@ -10,12 +10,26 @@
 
 <body>
   <main class="catalog catalog__container">
+    <div class="modal overlay">
+      <form class="modal__form">
+        <p class="modal_title">Введите ваши данные</p>
+        <button type="button" class="modal__close-button">&times;</button>
+        <input required name="name" type="text" class="modal__form_input" placeholder="Введите имя">
+        <input required name="lastname" type="text" class="modal__form_input" placeholder="Введите фамилию">
+        <input required name="birthday" type="date" class="modal__form_input" placeholder="Введите дату рождения">
+        <input required name="login" type="text" class="modal__form_input" placeholder="Введите логин">
+        <input required name="password" type="password" class="modal__form_input password" placeholder="Введите пароль">
+        <input required type="password" class="modal__form_input password-repeat" placeholder="Повторите пароль">
+        <button type="submit" class="modal__form_submit-button">Отправить</button>
+      </form>
+    </div>
     <div class="buttons-container">
       <button class="buttons" id="change-card-color-button">Сменить цвет карточки</button>
       <button class="buttons" id="change-cards-color-button">Сменить цвет всех карточек</button>
       <button class="buttons" id="google-button">Открыть гугл</button>
       <button class="buttons" id="open-console-button">Console log</button>
       <button class="buttons sea" id="colorful-button">Разноцветная кнопка</button>
+      <button class="buttons" id="registration_button">Регистрация</button>
     </div>
     <h1 class="title catalog__title">Выбери свой продукт</h1>
     <div id="product-list" class="container ">
@@ -37,11 +51,37 @@
       </div>
     </template>
   </main>
+  <footer class="footer">
+  <div class="footer__content">
+    <nav class="footer__nav">
+      <p class="footer__nav_title">Быстрые ссылки</p>
+      <a href="#" class="footer__nav_link">Главная</a>
+      <a href="#" class="footer__nav_link">Магазин</a>
+      <a href="#" class="footer__nav_link">Контакты</a>
+    </nav>
+    <section class="subscription">
+      <h3 class="subscription__title">Подпишись на наши акции:</h3>
+      <form class="subscription__form">
+        <input type="email" class="subscription__form_input" name="email" placeholder="Введи Email..." required >
+        <button type="submit" class="subscription__form_button">Подписаться</button>
+      </form>
+    </section>
+    <div class="footer__text">
+      <h2 class="footer__title">Product cards</h2>
+      <p class="footer__description">У Нас Самые Лучшие Продукты Для Кожи!</p>
+      <img class="footer__logo_tg" src="img/logo_tg.svg" alt="Telegram">
+      <img class="footer__logo_vk" src="img/logo_vk.svg" alt="VK">
+    </div>
+  </div>
+  <div class="footer__line"></div>
+  <a href="http://www.product-cccards.com" class="footer_link">www.product-cards.com©all right reserve</a>
+</footer>
   <script src="main.js"></script>
   <script src="homework-7.js"></script>
   <script src="homework-8.js"></script>
   <script src="homework-9.js" type="module"></script>
   <script src="homework-10.js" type="module"></script>
+  <script src="homework-11.js"></script>
 </body>
 
 </html>
