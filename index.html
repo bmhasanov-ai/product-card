@@ -10,8 +10,8 @@
 
 <body>
   <main class="catalog catalog__container">
-    <div class="modal overlay">
-      <form class="modal__form">
+    <div id="registration-modal" class="modal overlay">
+      <form id="registration-form" class="modal__form">
         <p class="modal_title">Введите ваши данные</p>
         <button type="button" class="modal__close-button">&times;</button>
         <input required name="name" type="text" class="modal__form_input" placeholder="Введите имя">
@@ -19,7 +19,7 @@
         <input required name="birthday" type="date" class="modal__form_input" placeholder="Введите дату рождения">
         <input required name="login" type="text" class="modal__form_input" placeholder="Введите логин">
         <input required name="password" type="password" class="modal__form_input password" placeholder="Введите пароль">
-        <input required type="password" class="modal__form_input password-repeat" placeholder="Повторите пароль">
+        <input required name="passwordRepeat" type="password" class="modal__form_input password-repeat" placeholder="Повторите пароль">
         <button type="submit" class="modal__form_submit-button">Отправить</button>
       </form>
     </div>
@@ -61,7 +61,7 @@
     </nav>
     <section class="subscription">
       <h3 class="subscription__title">Подпишись на наши акции:</h3>
-      <form class="subscription__form">
+      <form id="subscription-form" class="subscription__form">
         <input type="email" class="subscription__form_input" name="email" placeholder="Введи Email..." required >
         <button type="submit" class="subscription__form_button">Подписаться</button>
       </form>
@@ -76,12 +76,7 @@
   <div class="footer__line"></div>
   <a href="http://www.product-cccards.com" class="footer_link">www.product-cards.com©all right reserve</a>
 </footer>
-  <script src="main.js"></script>
-  <script src="homework-7.js"></script>
-  <script src="homework-8.js"></script>
-  <script src="homework-9.js" type="module"></script>
-  <script src="homework-10.js" type="module"></script>
-  <script src="homework-11.js"></script>
+  <script src="main.js" type="module"></script>
 </body>
 
 </html>
