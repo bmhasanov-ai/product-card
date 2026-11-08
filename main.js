@@ -71,26 +71,21 @@ let user;
 
 registrationForm.formElement.addEventListener('submit', (e) => {
   e.preventDefault();
-  
   if (!registrationForm.isValid()) {
     registrationForm.formElement.reportValidity();
     return;
   }
 
   const formValues = registrationForm.getValues();
-
   if (formValues.password !== formValues.passwordRepeat) {
     alert('Пароли не совпадают');
     return;
   }
 
   user = { ...formValues, createdOn: new Date() };
-
   console.log(user);
-
   registrationModal.close()
 });
-
 
 const subscriptionForm = new ClassForm('subscription-form');
 
